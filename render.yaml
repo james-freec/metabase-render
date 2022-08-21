@@ -3,7 +3,8 @@ services:
     name: metabase
     env: docker
     repo: https://github.com/james-freec/metabase-render.git # optional
-    plan: standard # ensure that metabase has at least 2GB of RAM (defaults to starter)
+    region: singapore
+    plan: free # ensure that metabase has at least 2GB of RAM (defaults to starter)
     envVars:
       - key: MB_DB_CONNECTION_URI
         fromDatabase:
