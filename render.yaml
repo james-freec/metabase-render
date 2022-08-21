@@ -4,7 +4,7 @@ services:
     env: docker
     repo: https://github.com/james-freec/metabase-render.git # optional
     region: singapore
-    plan: free # ensure that metabase has at least 2GB of RAM (defaults to starter)
+    plan: starter # ensure that metabase has at least 2GB of RAM (defaults to starter)
     envVars:
       - key: MB_DB_CONNECTION_URI
         fromDatabase:
@@ -13,4 +13,5 @@ services:
 databases:
   - name: elephant
     databaseName: metabasedb
+    region: singapore
     ipAllowList: [] # only allow internal connections
