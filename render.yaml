@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: metabase
+    name: web-report-freec
     env: docker
     repo: https://github.com/james-freec/metabase-render.git # optional
     region: singapore
@@ -8,10 +8,10 @@ services:
     envVars:
       - key: MB_DB_CONNECTION_URI
         fromDatabase:
-          name: elephant
+          name: db-metabase-freec
           property: connectionString
 databases:
-  - name: elephant
+  - name: db-metabase-freec
     databaseName: metabasedb
     region: singapore
     plan: free
